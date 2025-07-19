@@ -1,0 +1,363 @@
+// variable
+
+$color-primary: #F4B408;
+$color-secondary: #310000;
+$color-text: #3A3A3A;
+$color-text-secondary: #5C5C5C;
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-black-2: #414141;
+$color-primary-light: #F5E4B6;
+$color-light: #F5F5F5;
+$color-grey-1: #E1E1E1;
+
+$max-screen: 1440px;
+
+$border-radius-1: 12px;
+$border-radius-2: 24px;
+
+$gutter-big: 60px;
+$gutter-small: 30px;
+
+$transition-1: all 0.3s ease-in-out;
+
+$default-font: "Poppins", sans-serif;
+
+// utilities
+
+.flex-1 {
+  flex: 1;
+}
+
+.txt-primary {
+  color: $color-primary;
+}
+
+.txt-text-secondary {
+  color: $color-text-secondary;
+}
+
+.section-gutter {
+  padding-top: $gutter-big;
+  &__bottom {
+    padding-bottom: $gutter-big;
+  }
+}
+
+// typography
+
+.title {
+  &__big {
+    font-size: 58px;
+    font-weight: bold;
+  }
+  &__heading {
+    font-size: 38px;
+    font-weight: bold;
+  }
+  &__medium {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  &__small {
+    font-size: 20px;
+  }
+  &__x-small {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.paragraph {
+  &__default {
+    font-size: 16px;
+  }
+  &__medium {
+    font-size: 18px;
+  }
+  &__small {
+    font-size: 12px;
+  }
+}
+
+// default element reset
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+// component
+
+.button {
+  padding: 12px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $border-radius-1;
+  &--primary {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+}
+
+.custom-swiper-nav__item {
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: $color-black;
+  color: $color-white;
+}
+
+.custom-swiper-nav__prev {
+  position: absolute;
+  bottom: 50%;
+  left: -38px;
+  z-index: 9;
+  transform: translateY(-50%);
+}
+
+.custom-swiper-nav__next {
+  position: absolute;
+  bottom: 50%;
+  right: -38px;
+  z-index: 9;
+  transform: translateY(-50%);
+}
+
+// reset
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+// style
+
+body {
+  position: relative;
+  overflow-x: hidden;
+
+  line-height: 1.6;
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-text;
+  font-family: $default-font;
+
+  background-color: #FFFFFF;
+}
+
+.section-header {
+  background-color: $color-secondary;
+}
+
+.nav {
+  &__item {
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      color: $color-white;
+      transition: $transition-1;
+      &:hover {
+        color: $color-primary;
+        transition: $transition-1;
+      }
+    }
+    &--active {
+      a {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__menu-icon {
+    span {
+      width: 28px;
+      height: 3px;
+      border-radius: 4px;
+      background-color: $color-white;
+    }
+  }
+
+  &__icon {
+    color: $color-white;
+    font-size: 42px;
+  }
+}
+
+.hero {
+  &__image {
+    max-width: 400px;
+  }
+  &__content {
+    max-width: 580px;
+  }
+}
+
+.service__item {
+  max-width: 330px;
+  padding: 32px 28px;
+  border-radius: $border-radius-2;
+  background-color: rgba($color-primary-light, 0.25);
+  img {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
+.international-relation__item {
+  width: 340px;
+  text-align: left;
+  img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 200px;
+  }
+}
+
+// news
+.section-news {
+  background-color: $color-light;
+}
+
+.news {
+  &__item {
+    background-color: $color-white;
+    max-width: 304px;
+    border-radius: $border-radius-1;
+    &__img {
+      img {
+        width: 100%;
+        border-top-left-radius: $border-radius-1;
+        border-top-right-radius: $border-radius-1;
+      }
+    }
+  }
+}
+
+// parliment section
+.section-parliment {
+  min-height: 420px;
+  background-color: rgba($color-primary-light, 0.3);
+  background-image: url('./images/pradeep_yadav_parliment.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom left;
+
+  .parliment-item__box {
+    max-width: 540px;
+    margin-left: 270px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 16px;
+    column-gap: 4%;
+    .parlimet__item {
+      flex-basis: 48%;
+      .button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// media coverage list item
+.media-list__item {
+  &__img {
+    img {
+      width: 240px;
+      object-fit: cover;
+    }
+  }
+}
+
+.media-list {
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-grey-1;
+      padding-bottom: 16px;
+    }
+    &:not(:first-child) {
+      padding-top: 16px;
+    }
+  }
+}
+
+// party info section
+.section-party-info {
+}
+
+.party-info {
+  &__left {
+    flex-basis: 50%;
+  }
+
+  &__image-box {
+    margin-top: 100px;
+  }
+  
+  &__right {
+    flex-basis: 50%;
+    img {
+      width: 100%;
+      height: 700px;
+      object-fit: contain;
+    }
+  }
+}
+
+// footer
+.footer {
+  padding-bottom: $gutter-small;
+  background-color: $color-black-2;
+  &__item-box__list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    ul {
+      color: $color-white;
+      &:not(:first-child) {
+        padding-left: 2rem;
+      }
+      &:not(:last-child) {
+        padding-right: 2rem;
+        border-right: 1px solid $color-text-secondary;
+      }
+      li {
+        a:hover {
+          color: $color-primary;
+        }
+        &:not(:last-child) {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+  .footer-store-image {
+    height: 120px;
+    img {
+      // width: 100%;
+      height: 120px;
+      object-fit: contain;
+    }
+  }
+}
