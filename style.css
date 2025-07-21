@@ -326,6 +326,8 @@ body.menu-open .sidebar {
 
 .section-parliment {
   min-height: 420px;
+  height: 100vh;
+  max-height: 720px;
   background-color: rgba(245, 228, 182, 0.3);
   background-image: url("./images/pradeep_yadav_parliment.png");
   background-repeat: no-repeat;
