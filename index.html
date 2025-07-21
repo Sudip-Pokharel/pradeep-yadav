@@ -22,35 +22,38 @@
             <nav class="nav d-block">
                 <ul class="nav__box list-unstyled d-flex align-items-center justify-content-between">
                     <li class="nav__left d-flex align-items-center gap-5">
-                        <a href="" class="nav__menu-icon d-flex flex-column align-items-center justify-content-center gap-2">
+                        <span id="menu-open-trigger" class="nav__menu-icon d-flex flex-column align-items-center justify-content-center gap-2">
                             <span></span>
                             <span></span>
                             <span></span>
-                        </a>
-                        <a href="" class="nav__icon fw-semibold">
+                        </span>
+                        <a href="index.html" class="nav__icon fw-semibold">
                             Pradeep Yadav
                         </a>
                     </li>
                     <li class="nav__right">
                         <ul class="list-unstyled d-flex align-items-center gap-4">
                             <li class="nav__item nav__item--active">
-                                <a href="">Home</a>
+                                <a href="index.html">Home</a>
                             </li>
                             <li class="nav__item">
                                 <a href="">About</a>
                             </li>
                             <li class="nav__item">
-                                <a href="">Articles</a>
+                                <a href="">Activity Center</a>
                             </li>
                             <li class="nav__item">
-                                <a href="">Blogs</a>
+                                <a href="">Press Release</a>
                             </li>
                             <li class="nav__item">
-                                <a href="">Contact Us</a>
+                                <a href="">News</a>
                             </li>
                             <li class="nav__item">
+                                <a href="">Contact</a>
+                            </li>
+                            <!-- <li class="nav__item">
                                 <a href="">EN  ने</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </li>
                 </ul>
@@ -93,6 +96,80 @@
         </header>
     </section>
 
+    <!-- Menu -->
+    <aside class="sidebar p-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="sidebar__icon fw-semibold m-0">
+                Pradeep Yadav
+            </h2>
+            <span class="menu-close-icon" id="menu-close-trigger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </span>
+        </div>
+        <hr>
+        <nav class="pt-2 sidebar__nav">
+            <ul class="list-unstyled sidebar__item-list">
+                <li>
+                    <a class="active" href="index.html">Home</a>
+                </li>
+                <li>
+                    <span class="fw-semibold mb-2 mt-3 d-block list-title">
+                        Address & Speech
+                    </span>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="">In Parliament</a>
+                        </li>
+                        <li>
+                            <a href="">Party Program</a>
+                        </li>
+                        <li>
+                            <a href="">Ministerial Arrangement</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="fw-semibold mb-2 mt-3 d-block list-title">
+                        Activity Center
+                    </span>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="">In Parliament</a>
+                        </li>
+                        <li>
+                            <a href="">Interviews</a>
+                        </li>
+                        <li>
+                            <a href="">Documents</a>
+                        </li>
+                        <li>
+                            <a href="">Ideas & Plans</a>
+                        </li>
+                        <li>
+                            <a href="">Photos & Media</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="">About</a>
+                </li>
+                <li>
+                    <a href="">Press Release</a>
+                </li>
+                <li>
+                    <a href="">News</a>
+                </li>
+                <li>
+                    <a href="">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
     <!-- minister served section -->
     <section class="section-service container section-gutter section-gutter__bottom">
         <h2 class="title title__heading mb-4">
@@ -111,43 +188,31 @@
                             <p class="paragraph paragraph__small fw-semibold mb-4">
                                 July 2024 to current
                             </p>
-                            <button class="button button--primary">Learn More</button>
+                            <a href="ministry-served.html?id=1" class="button button--primary">Learn More</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="service__item d-flex align-items-center justify-content-center flex-column">
                             <img src="./images/Emblem_of_Nepal.png" alt="Pradeep Yadav Ministry Served">
                             <p class="paragraph paragraph__medium fw-semibold mb-0 mt-4 pb-1">
-                                Ministry of Water Supply
+                                Ministry of Health and Population
                             </p>
                             <p class="paragraph paragraph__small fw-semibold mb-4">
-                                July 2024 to current
+                                13 May 2024 - 8 July 2024
                             </p>
-                            <button class="button button--primary">Learn More</button>
+                            <a href="ministry-served.html?id=2" class="button button--primary">Learn More</a>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="service__item d-flex align-items-center justify-content-center flex-column">
                             <img src="./images/Emblem_of_Nepal.png" alt="Pradeep Yadav Ministry Served">
                             <p class="paragraph paragraph__medium fw-semibold mb-0 mt-4 pb-1">
-                                Ministry of Water Supply
+                                Ministry of Forest and Environment
                             </p>
                             <p class="paragraph paragraph__small fw-semibold mb-4">
-                                July 2024 to current
+                                4 July 2022 - 14 October 2022
                             </p>
-                            <button class="button button--primary">Learn More</button>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="service__item d-flex align-items-center justify-content-center flex-column">
-                            <img src="./images/Emblem_of_Nepal.png" alt="Pradeep Yadav Ministry Served">
-                            <p class="paragraph paragraph__medium fw-semibold mb-0 mt-4 pb-1">
-                                Ministry of Water Supply
-                            </p>
-                            <p class="paragraph paragraph__small fw-semibold mb-4">
-                                July 2024 to current
-                            </p>
-                            <button class="button button--primary">Learn More</button>
+                            <a href="ministry-served.html?id=3" class="button button--primary">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -172,7 +237,7 @@
     </section>
 
     <!-- news section -->
-    <section class="section-news section-gutter section-gutter__bottom">
+    <!-- <section class="section-news section-gutter section-gutter__bottom">
         <div class="container">
             <h2 class="title title__heading mb-1">
                 News
@@ -250,7 +315,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- parliment section -->
      <section class="section-parliment section-gutter section-gutter__bottom">
@@ -369,7 +434,7 @@
      </section>
 
     <!-- media coverage & speeches -->
-     <div class="section-media-speech d-flex align-items-start justify-content-between gap-4 section-gutter section-gutter__bottom container">
+     <!-- <div class="section-media-speech d-flex align-items-start justify-content-between gap-4 section-gutter section-gutter__bottom container">
         <section class="media-section">
             <h2 class="title title__medium mb-1">
                 Media Coverage
@@ -472,10 +537,10 @@
                 </article>
             </div>
         </section>
-     </div>
+     </div> -->
 
     <!-- international relations section -->
-    <section class="section-international-relation section-gutter section-gutter__bottom">
+    <!-- <section class="section-international-relation section-gutter section-gutter__bottom">
         <div class="container">
             <h2 class="title title__heading mb-1">
                 International Relations
@@ -557,7 +622,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="section-party-info">
         <div class="container">
@@ -587,8 +652,8 @@
 
     <footer class="footer section-gutter">
         <div class="container">
-            <ul class="list-unstyled d-flex align-items-start justify-content-between">
-                <li class="d-flex gap-3 flex-column">
+            <ul class="list-unstyled footer-list-wrapper">
+                <li class="footer-icon-box">
                     <a href="" class="nav__icon fw-semibold">
                         Pradeep Yadav
                     </a>
@@ -598,25 +663,32 @@
                 </li>
                 <li class="footer__item-box__list">
                     <ul class="list-unstyled">
-                        <li class="paragraph paragraph__medium fw-bold mb-4">Lorem ipsum dolor</li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">About</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Articles</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Blogs</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Contact Us</a></li>
+                        <li class="paragraph paragraph__medium fw-bold mb-4">Media</li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">News</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Media coverage</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">International Relations</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Party</a></li>
                     </ul>
                     <ul class="list-unstyled">
-                        <li class="paragraph paragraph__medium fw-bold mb-4">Lorem ipsum dolor</li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">About</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Articles</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Blogs</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Contact Us</a></li>
+                        <li class="paragraph paragraph__medium fw-bold mb-4">Address & Speech</li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">In Parliament</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Party Program</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Ministerial Arrangement</a></li>
                     </ul>
                     <ul class="list-unstyled">
-                        <li class="paragraph paragraph__medium fw-bold mb-4">Lorem ipsum dolor</li>
+                        <li class="paragraph paragraph__medium fw-bold mb-4">Activity Center</li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">In Parliament</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Interviews</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Documents</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Ideas & Plans</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Photos & Media</a></li>
+                    </ul>
+                    <ul class="list-unstyled">
+                        <li class="paragraph paragraph__medium fw-bold mb-4">Other</li>
                         <li class="paragraph paragraph__small fw-medium"><a href="">About</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Articles</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Blogs</a></li>
-                        <li class="paragraph paragraph__small fw-medium"><a href="">Contact Us</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Press Release</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">News</a></li>
+                        <li class="paragraph paragraph__small fw-medium"><a href="">Contact</a></li>
                     </ul>
                 </li>
             </ul>

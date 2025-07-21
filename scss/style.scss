@@ -23,6 +23,12 @@ $transition-1: all 0.3s ease-in-out;
 
 $default-font: "Poppins", sans-serif;
 
+$breakpoint-lg: 1200px;
+$breakpoint-md: 991px;
+$breakpoint-sm: 680px;
+$breakpoint-mobile: 480px;
+$breakpoint-mobile-sm: 320px;
+
 // utilities
 
 .flex-1 {
@@ -128,6 +134,12 @@ ul {
   left: -38px;
   z-index: 9;
   transform: translateY(-50%);
+  @media only screen and (max-width: $breakpoint-md) {
+    left: -26px;
+  }
+  @media only screen and (max-width: $breakpoint-sm) {
+    left: -10px;
+  }
 }
 
 .custom-swiper-nav__next {
@@ -136,6 +148,12 @@ ul {
   right: -38px;
   z-index: 9;
   transform: translateY(-50%);
+  @media only screen and (max-width: $breakpoint-md) {
+    right: -26px;
+  }
+  @media only screen and (max-width: $breakpoint-sm) {
+    right: -10px;
+  }
 }
 
 // reset
@@ -169,6 +187,9 @@ body {
 
 .section-header {
   background-color: $color-secondary;
+  &--light {
+    background-color: $color-white;
+  }
 }
 
 .nav {
@@ -178,11 +199,13 @@ body {
       font-weight: 500;
       color: $color-white;
       transition: $transition-1;
+
       &:hover {
         color: $color-primary;
         transition: $transition-1;
       }
     }
+
     &--active {
       a {
         color: $color-primary;
@@ -191,6 +214,7 @@ body {
   }
 
   &__menu-icon {
+    cursor: pointer;
     span {
       width: 28px;
       height: 3px;
@@ -203,6 +227,106 @@ body {
     color: $color-white;
     font-size: 42px;
   }
+
+  &--light {
+    background-color: white;
+
+    .nav__item {
+      a {
+        color: $color-text;
+
+        &:hover {
+          color: $color-primary;
+          transition: $transition-1;
+        }
+      }
+
+      &--active {
+        a {
+          color: $color-primary;
+        }
+      }
+    }
+
+    .nav__icon {
+      color: $color-text;
+    }
+
+    .nav__menu-icon {
+      span {
+        background-color: $color-text;
+      }
+    }
+  }
+
+  &__right {
+    @media only screen and (max-width: $breakpoint-md) {
+      display: none;
+    }
+  }
+}
+
+// side nav
+.sidebar {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  z-index: 99;
+  height: 100vh;
+  background-color: $color-black-2;
+  color: $color-white;
+  transition: $transition-1;
+  .menu-close-icon {
+    cursor: pointer;
+  }
+  @media only screen and (max-width: $breakpoint-mobile-sm) {
+    width: 100%;
+  }
+  &__icon {
+    color: $color-primary;
+    font-size: 20px;
+  }
+  &__item-list {
+    a {
+      padding: 10px 8px 10px 0;
+      transform: $transition-1;
+      font-weight: 500;
+      font-size: 15px;
+      &.active,
+      &:hover {
+        color: $color-primary;
+        transform: $transition-1;
+      }
+    }
+
+    .list-title {
+      font-size: 16px;
+    }
+    
+    li {
+      margin-bottom: 10px;
+      ul {
+        padding-left: 1.5rem;
+      }
+    }
+  }
+
+  &__nav {
+    height: 100%;
+    overflow: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    padding-bottom: 48px;
+  }
+
+}
+body.menu-open {
+  overflow: hidden;
+  .sidebar {
+    left: 0;
+    transition: $transition-1;
+  }
 }
 
 .hero {
@@ -211,6 +335,14 @@ body {
   }
   &__content {
     max-width: 580px;
+    @media only screen and (max-width: $breakpoint-md) {
+      max-width: 100%;
+      padding-top: 2rem;
+      padding-bottom: 4rem;
+    }
+  }
+  @media only screen and (max-width: $breakpoint-md) {
+    flex-direction: column;
   }
 }
 
@@ -218,10 +350,17 @@ body {
   max-width: 330px;
   padding: 32px 28px;
   border-radius: $border-radius-2;
+  text-align: center;
   background-color: rgba($color-primary-light, 0.25);
   img {
     width: 100%;
     max-width: 280px;
+  }
+  @media only screen and (max-width: $breakpoint-lg) {
+    max-width: 100%;
+    img {
+      max-width: 100%;
+    }
   }
 }
 
@@ -266,7 +405,8 @@ body {
 
   .parliment-item__box {
     max-width: 540px;
-    margin-left: 270px;
+    margin-left: auto;
+    margin-right: 120px;
     display: flex;
     flex-wrap: wrap;
     row-gap: 16px;
@@ -275,6 +415,20 @@ body {
       flex-basis: 48%;
       .button {
         width: 100%;
+      }
+    }
+    @media only screen and (max-width: $breakpoint-lg) {
+      margin-right: 0;
+    }
+    @media only screen and (max-width: $breakpoint-md) {
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+      .parlimet__item {
+        flex-basis: 100%;
+        .button {
+          width: fit-content;
+        }
       }
     }
   }
@@ -303,16 +457,28 @@ body {
 }
 
 // party info section
-.section-party-info {
-}
-
 .party-info {
   &__left {
     flex-basis: 50%;
+    @media only screen and (max-width: $breakpoint-md) {
+      flex-basis: 100%;
+      margin-top: $gutter-big;
+    }
   }
 
   &__image-box {
     margin-top: 100px;
+    @media only screen and (max-width: $breakpoint-md) {
+      margin-top: 40px;
+      width: 100%;
+    }
+    @media only screen and (max-width: $breakpoint-lg) {
+      width: 200px;
+      margin-top: 60px;
+      img {
+        width: 100%;
+      }
+    }
   }
   
   &__right {
@@ -322,6 +488,28 @@ body {
       height: 700px;
       object-fit: contain;
     }
+    @media only screen and (max-width: $breakpoint-md) {
+      flex-basis: 100%;
+      img {
+        height: 600px;
+      }
+    }
+    @media only screen and (max-width: $breakpoint-sm) {
+      flex-basis: 100%;
+      img {
+        height: 500px;
+      }
+    }
+    @media only screen and (max-width: $breakpoint-mobile) {
+      flex-basis: 100%;
+      img {
+        height: 400px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $breakpoint-md) {
+    flex-wrap: wrap;
   }
 }
 
@@ -329,29 +517,67 @@ body {
 .footer {
   padding-bottom: $gutter-small;
   background-color: $color-black-2;
-  &__item-box__list {
+  .footer-list-wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: start;
     justify-content: space-between;
-    ul {
-      color: $color-white;
-      &:not(:first-child) {
-        padding-left: 2rem;
-      }
-      &:not(:last-child) {
-        padding-right: 2rem;
-        border-right: 1px solid $color-text-secondary;
-      }
-      li {
-        a:hover {
-          color: $color-primary;
-        }
-        &:not(:last-child) {
-          margin-bottom: 8px;
-        }
-      }
-    }
   }
+
+  .footer-icon-box {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+  }
+  
+    &__item-box__list {
+      display: flex;
+      justify-content: space-between;
+  
+      ul {
+        color: $color-white;
+  
+        &:not(:first-child) {
+          padding-left: 2rem;
+        }
+  
+        &:not(:last-child) {
+          padding-right: 2rem;
+          border-right: 1px solid $color-text-secondary;
+        }
+  
+        li {
+          a:hover {
+            color: $color-primary;
+          }
+  
+          &:not(:last-child) {
+            margin-bottom: 8px;
+          }
+        }
+      }
+      @media only screen and (max-width: $breakpoint-sm) {
+        gap: 1rem;
+        ul {
+            flex-basis: calc(50% - 1rem);
+        
+            &:not(:first-child) {
+              padding-left: 0;
+            }
+            
+            &:not(:last-child) {
+              padding-right: 0;
+              border-right: none;
+            }
+          }
+        }
+        @media only screen and (max-width: $breakpoint-mobile) {
+          flex-wrap: wrap;
+          ul {
+            flex-basis: 100%;
+          }
+        }
+    }
+
   .footer-store-image {
     height: 120px;
     img {
@@ -359,5 +585,41 @@ body {
       height: 120px;
       object-fit: contain;
     }
+  }
+
+  @media only screen and (max-width: $breakpoint-md) {
+    .footer-list-wrapper {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .footer-icon-box {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  @media only screen and (max-width: $breakpoint-mobile) {
+    .footer-icon-box {
+      flex-direction: column;
+    }
+  }
+}
+
+// ministry served page
+.ministry-served-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  &__item {
+    width: 100%;
+    button {
+      width: 100%;
+    }
+  }
+  @media only screen and (max-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media only screen and (max-width: $breakpoint-sm) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
